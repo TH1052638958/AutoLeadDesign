@@ -1,0 +1,4 @@
+# configs of SMINA
+autobox_add: '1'
+seed: '1000'
+exhaustiveness: '16'
