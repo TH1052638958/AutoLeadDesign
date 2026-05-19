@@ -6,7 +6,7 @@ git clone "repo-url"
 ```
 2. Build environment
 ```bash
-cd LMLF/
+cd AutoLeadDesign/
 ```
 ```bash
 conda env create --name lmlf --file=environments.yml
@@ -16,5 +16,5 @@ conda activate lmlf
 ```
 3. Run the program
 ```bash
-python nofeedback.py
+python doublefeedback_fragment_two_stage.py
 ```
