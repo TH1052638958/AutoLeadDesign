@@ -16,7 +16,7 @@ conda activate AutoLeadDesign
 ```
 3. Prepare the target proteins and ligand to identy pocket(For example: datasets/8UOB_chainA_protein.pdb and 8UOB_chainA_ligand.pdb) and init molecules (For example: datasets/init.csv).
  Notise: The target protein and ligand must be named as xxx_chainA_protein.pdb and xxx_chainA_ligand.pdb when you are running for your own targets.
-5. 4.Prepare the docking configration file(For example: config/config_smina.yaml) 
+5. Prepare the docking configration file(For example: config/config_smina.yaml) 
    
    
    
