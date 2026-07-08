@@ -20,8 +20,10 @@ conda activate AutoLeadDesign
    
 4.Prepare the docking configration file(For example: config/config_smina.yaml) 
 
+
 5. Prepare your LLM API keys to communicate with LLMs and get your API_KEYS and PLANTFORM_URL
-   
+
+
 6. Run
 ```bash
 python doublefeedback_fragment_two_stage.py --exp-path 8UOB_test --protein-name 8UOB --num-molecules 100 --num-generations 20 --api-key $API_KEYS$ --plantform-url $PLANTFORM_URL$ --cfg-smina config/config_smina.yaml
