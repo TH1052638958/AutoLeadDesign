@@ -38,18 +38,7 @@ datasets_dir="$work_dir/datasets"
 
 
 
-#检查报错
-for required_path in \
-    "$datasets_dir" \
-    "$crossdocked_dir"\
-    "$work_dir/init.csv" \
-    "$work_dir/init.py" \
-    "$work_dir/run.py"; do
-    if [[ ! -e "$required_path" ]]; then
-        echo "Error：cannt find $required_path" >&2
-        exit 1
-    fi
-done
+
 
 
 #开始迭代
