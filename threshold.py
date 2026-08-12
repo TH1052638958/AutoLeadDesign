@@ -11,7 +11,7 @@ args = parser.parse_args()
 result_path = os.path.join(args.exp_path, args.result)
 data = pd.read_csv(result_path)
 
-max_score = data["dcoking_scores"].max()
+max_score = data["score"].max()
 threshold = max_score * args.rate
 
 print(threshold)
