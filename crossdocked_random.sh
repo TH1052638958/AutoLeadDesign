@@ -46,7 +46,7 @@ for (( number = start; number <= end; number++ )); do
     source_pdb="$crossdocked_dir/${number}-protein.pdb"
     source_ligand="$crossdocked_dir/${number}-ligand.sdf"
     renamed_pdb="$datasets_dir/${number}_chainA_protein.pdb"
-    renamed_ligand="$datasets_dir/${number}_chainA_ligand.pdb"
+    renamed_ligand="$datasets_dir/${number}_chainA_ligand.sdf"
     number_dir="$work_dir/random_${number}"
     reference_dir="$work_dir/reference_${number}"
 
