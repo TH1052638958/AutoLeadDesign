@@ -17,7 +17,7 @@ parser.add_argument('--protein-name', type=str, default='7L1G')
 parser.add_argument('--init', type=str, default='init.csv')
 parser.add_argument('--result', type=str, default='init_score.csv')
 parser.add_argument('--threshold', type=float, default=6.5)
-parser.add_argument('--cfg-smina', type=str, default='config_smina_PRMT5.yaml')
+parser.add_argument('--cfg-smina', type=str, default='config/config_smina.yaml')
 args = parser.parse_args()
 
 

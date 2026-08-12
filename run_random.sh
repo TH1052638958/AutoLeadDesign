@@ -24,7 +24,7 @@ python doublefeedback_fragment_two_stage.py --exp-path $EXPPATH --protein-name $
 echo "Running LMLF in $REFERENCE Targeting $PROTEIN"
 EXPPATH="LMLF_""$REFERENCE""_""$PROTEIN"
 mkdir $EXPPATH
-Threshold=$(python prepare_random.py --init-path $INITPATH --exp-path $EXPPATH)
+Threshold=$(python threshold.py  --exp-path $EXPPATH )
 python doublefeedback.py --exp-path $EXPPATH --protein-name $PROTEIN --num-molecules 100 --num-generations 20 --model-engine deepseek-chat --cfg-smina config/config_smina.yaml --api-key $API
 echo "Done"
 

@@ -2,6 +2,8 @@ import argparse
 import pandas as pd
 import os
 from rdkit import Chem
+
+#将reference的SMILES 加入到init.csv中组成新的init.csv
 parser = argparse.ArgumentParser(description='LMLF')
 parser.add_argument('--out-path', type=str, default='6IGX')
 parser.add_argument('--protein-name', type=str, default='6igx')
