@@ -58,7 +58,7 @@ for (( number = start; number <= end; number++ )); do
     mkdir -p -- "$number_dir"
     #cp -- "$work_dir/datasets/init.csv" "$reference_dir/init.csv"
     #将reference SMILES 加入到init.csv中，保存到reference dir中
-    python init_reference.py --out-path "$reference_dir/init.csv" --protein-name $number
+    python init_reference.py --out-path "$reference_dir" --protein-name $number
     #将init+reference全对接
     python init.py --exp-path $reference_dir --protein-name $number
     #将除reference以外的结果保存到random路径下
