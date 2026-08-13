@@ -23,7 +23,7 @@ import os
 from openai import OpenAI
 from openai.types.chat import completion_create_params
 os.environ["OPENAI_BASE_URL"]="https://api.deepseek.com"
-os.environ["OPENAI_API_KEY"]="sk-70b61d1b41c0432fb0b713cc921de3f4"
+os.environ["OPENAI_API_KEY"]="xxx"
 model_engine = 'deepseek-v4-flash' # You can choose a different model if desired
 prompt = f'Generate a novel valid drug-like molecule SMILES which contains one fragment of [ N1CC[C@@]2(C[C@H](N)C3=C(C=CC=C3)O2)C1 , C1NC[C@@H]2CC[C@]3(N=C(CC)NC3=O)[C@@H]12,N1CC2=CC(C)=CC=C2C1C1=CC=CC=C1 ] at least and do not generate any English text.'
 client = OpenAI()
