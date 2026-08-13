@@ -22,25 +22,25 @@ import json
 import os
 from openai import OpenAI
 from openai.types.chat import completion_create_params
-os.environ["OPENAI_BASE_URL"]="https://www.blueshirtmap.com/v1"
-os.environ["OPENAI_API_KEY"]="xxx"
-model_engine = 'gpt-4o' # You can choose a different model if desired
-prompt = f'Generate a novel valid molecule SMILES and do not generate any English text'
-
+os.environ["OPENAI_BASE_URL"]="https://api.deepseek.com"
+os.environ["OPENAI_API_KEY"]="sk-70b61d1b41c0432fb0b713cc921de3f4"
+model_engine = 'deepseek-v4-flash' # You can choose a different model if desired
+prompt = f'Generate a novel valid drug-like molecule SMILES which contains one fragment of [ N1CC[C@@]2(C[C@H](N)C3=C(C=CC=C3)O2)C1 , C1NC[C@@H]2CC[C@]3(N=C(CC)NC3=O)[C@@H]12,N1CC2=CC(C)=CC=C2C1C1=CC=CC=C1 ] at least and do not generate any English text.'
 client = OpenAI()
-
 completion = client.chat.completions.create(
-                model=model_engine,
-                messages=[
-                    {"role": "user", "content": prompt}],
-                n=1,
-                max_tokens=60,
-                temperature=0.5,
-                stop="!",
-                user="user"
-            )
-print(completion)
-new_mol=json.loads(completion.model_dump_json())["choices"][0]["message"]["content"]
+                    model=model_engine,
+                    messages=[
+                        {"role": "user", "content": prompt}],
+                    #n=1,
+                    #max_tokens=60,
+                    temperature=1.5,
+                    extra_body={"thinking": {"type": "disabled"}},
+                    #stop="!",
+                    #user="user"
+                    stream=False
+                )
+new_mol = json.loads(completion.model_dump_json())["choices"][0]["message"]["content"]
 print(new_mol)
+
 
 

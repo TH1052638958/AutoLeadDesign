@@ -236,6 +236,7 @@ for i in range(1, num_generations):
                     #n=1,
                     #max_tokens=60,
                     temperature=args.temperature,
+                    extra_body={"thinking": {"type": "disabled"}},
                     #stop="!",
                     #user="user"
                     stream=False
