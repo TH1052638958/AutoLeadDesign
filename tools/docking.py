@@ -105,6 +105,8 @@ def calc_affinity(sml,
         exhaustiveness = '16'
 
     try:
+        if len(sml)>200:
+            raise ValueError('Large SMILES')
         mol = Chem.MolFromSmiles(sml)
         m2 = Chem.AddHs(mol)
         status=AllChem.EmbedMolecule(m2)
